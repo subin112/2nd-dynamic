@@ -21,12 +21,6 @@ body{
 }
 
 
-/* .container{
-    width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    display: block;
-} */
 #header{
     padding: 0px 60px;
     display: flex;
@@ -493,7 +487,7 @@ font-weight: 400;
     display: flex;
     flex-direction: row;
 }
-.nav-content1 button{
+/* .nav-content1 button{
     width: 36px;
     height: 36px;
     position: relative;
@@ -512,7 +506,7 @@ font-weight: 400;
     justify-content: center;
     font-size: 20px;
     color: #004275;
- }
+ } */
 
 .section1-item img{
 width: 96.5%;
@@ -909,7 +903,6 @@ margin-top: 4px;
 .roller{
 padding: 9.5px 28.83px;
 background-color: #dce9f3;
-/* height: 40px; */
 color: rgb(0, 66, 117);
 border-radius: 20px;
 }
@@ -921,9 +914,9 @@ border-radius: 20px;
     overflow-x: auto;
     width: 90%;
 }
+
 li.roller{
    cursor: pointer;
-/* flex-basis: auto; */
 font-family: "normal-font";
 font-size: 16px;
 font-weight: 600;
@@ -1329,7 +1322,7 @@ border-radius: 8px;
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-   width: 58.96%;
+   /* width: 58.96%; */
    position: absolute;
    bottom: 31%;
    left: 20%;
@@ -1388,6 +1381,28 @@ font-size: 12px;
 font-weight: 600;
 letter-spacing: 0.96px;
 line-height: 16px
+}
+.villain::after{
+    content: "";
+    font-size: 18px;
+    font-family: "new-font";
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    
+}
+.rdx button{
+    padding: 12px 15px;
+    background-color: #0078D4;
+    border: none;
+    border-radius: 8px;
+    position: absolute;
+    right: 20%;
+    top: 34%;
+}
+#right-flex{
+    position: relative;
+    width: 100%;
 }
 #biscuit{
     box-sizing: border-box;
@@ -1477,7 +1492,7 @@ background-color: #0078D4;
 .men{
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    /* flex-wrap:wrap; */
     margin: auto;
     margin-top: 2.5%;
     border: 1px solid #e2e2e2;
@@ -1536,6 +1551,7 @@ background-color: #0078D4;
     padding-left: 5%;
     padding-top: 3%;
 }
+
 .fix{
     box-sizing: border-box;
 color: rgb(0, 66, 117);
@@ -1944,7 +1960,12 @@ max-width: 100%;
       margin: 0;
       margin-top: 20px;
         width: 57.8%;
-        margin:20px  auto;
+        justify-content: center;
+       /* display: flex; */
+       margin: auto;
+       padding-top: 30px;
+       justify-content: center;
+      
         
        
     }
@@ -1974,6 +1995,9 @@ max-width: 100%;
 @media (max-width:1083px){
     .rightSide{
         display: none;
+    }
+    .azim{
+        left: 17%;
     }
     #build-and{
         font-weight: 500;
@@ -2043,20 +2067,51 @@ max-width: 100%;
     display: none;
 }
 }
-@media (min-width:860px) and (max-width:1070px){
+@media (max-width:1070px){
     .blueright{
         justify-content: center;
         align-items: center;
         padding: 0;
         display: flex;
+        position: fixed;
+        left: -20px;
     }
     .navmobile-hide {
-        max-width: 717px;
+        max-width: 617px;
         display: flex;
         flex-direction: row;
         overflow-x: auto;
         column-gap: 0;
+        position: relative;
+        max-width: 100%;
+        right: 0;
+        left: 0;
+        padding: 0 30px;
     }
+    .nav-content1{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .nav-content1 button{
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top: 24px;
+    border-radius: 50%;
+    border: 2px solid #004275;
+    background-color: #fff;
+}
+.nav-content1 button::after{
+    content: "";
+    font-family: "new-font";
+    font-size: var(--root-h5-font-size);
+    font-weight: var(--root-small-font-weight);
+    color: var(--arrow-color);
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
+    justify-content: center;
+    font-size: 20px;
+    color: #004275;
+ }
 
 }
 @media(max-width:859px){
@@ -2064,9 +2119,11 @@ max-width: 100%;
 .section1-padding{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-    padding: 0 70px;
+     padding: 0 70px;
     
+}
+.blueright{
+    display: none;
 }
 .section1{
     height: 1400px;
@@ -2085,7 +2142,7 @@ max-width: 100%;
     position: inherit;
 }
 .section2 {
-    margin-top: 10%;
+    margin-top: 30%;
 }
 .small-txt{
     display: block;
@@ -2094,11 +2151,12 @@ max-width: 100%;
 .air::after {
     font-family: "new-font";
         content: "";
-         font-size: 12px;
+         font-size: 15px;
         font-weight: 700;
-        padding-left: 7px;
+        padding-left: 0px;
         position: relative;
-        top: 2px;
+        /* transform: translateX(-30px); */
+        top: 3px;
     }
     .air::after :active{
         transform: rotate(30deg);
@@ -2109,12 +2167,29 @@ background-color: transparent;
     border: 0;
     font-family: "normal-font";
     color: #000;
-    display: block ;
+    display: flex ;
     font-weight: 600;
     height: 100%;
     margin: 0 1px;
-   
-    text-align: left;    }
+   width: 80px;
+   height: 33px;
+    text-align: left; 
+   }
+     .dropdownIn {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    z-index: 1;
+  }
+  .dropdownIn div {
+    padding: 8px;
+    cursor: pointer;
+  }
+  .dropdownIn div:hover {
+    background-color: #f1f1f1;
+  }
 
     #header{
         padding: 0;
@@ -2151,6 +2226,7 @@ display: flex;
 }
 .men{
     overflow-x: auto;
+    flex-wrap:initial;
 }
 .gartner{
     flex-direction: column-reverse;
@@ -2200,8 +2276,9 @@ padding: 20px;
 #boxer{
 padding: 0;
 }
-.full-box{
+.boxer{
     padding: 10px;
+    margin-left: 10px;
 }
 .resources{
     padding: 60px;
@@ -2309,6 +2386,14 @@ height: 100%;
 .section1-item img{
     width: 98%;
 }
+
+.right-flex{
+    position: relative;
+}
+.rdx button {
+   transform: translateY(-100px);
+right: 53%;
+}
 }
 @media(max-width:539px){
     .peda{
@@ -2362,6 +2447,28 @@ height: 100%;
     .banner-padding{
         margin-top: 5rem;
     }
+   
+    .nailed-again{
+        left: 0;
+    }
+   .lise{
+    padding-right: 0;
+   }
+   .loss{
+    width: 90%;
+    padding: 0;
+   }
+   #res{
+    width: 100%;
+   }
+   .azim{
+    width: none;
+    max-width: 400px;
+   }
+   .rdx button{
+transform: translateY(-150px); 
+right: 40%; 
+}
 }
 
 

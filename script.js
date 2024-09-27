@@ -550,7 +550,22 @@ microsoft.header.features.forEach((item) => {
 
 
     const srchTxt = document.getElementById("sarchSpan");
+    srchTxt.className = 'inputDiv'
     srchTxt.innerHTML = microsoft.header.rightSide;
+
+    const input = document.querySelector('.inputDiv')
+    input.addEventListener('click',inputfunc)
+
+    function inputfunc(){
+const newINput = document.createElement('input')
+
+    }
+  
+    // input.appendChild(srchTxt)
+
+
+
+
 
     const listSearch = document.getElementById("search-list");
 
@@ -661,7 +676,7 @@ strict.appendChild(buttonWay)
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         const url =
-          "https://techcommunity.microsoft.com/t5/copilot-for-microsoft-365/prompt-like-a-pro-with-microsoft-copilot-in-teams/ba-p/4141986";
+          "https://azure.microsoft.com/en-in/solutions/ai/responsible-ai-with-azure/";
         window.location.href = url;
       });
     });
@@ -736,6 +751,12 @@ const  villain = document.querySelector('.rdx')
     fineEl.innerHTML = microsoft.rasak.lorem;
     const elFine = document.getElementById("productBtn");
     elFine.innerHTML = microsoft.rasak.btmlorem;
+
+elFine.addEventListener('click',()=>{
+  window.open('https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety')
+})
+
+
 
     const radar = document.getElementById("section-grid");
     microsoft.rasak.grid.forEach((item) => {
@@ -830,6 +851,9 @@ ${item.aloo}`;
     lamp.src = microsoft.river.hall.foreigner;
     const tape = document.getElementById("case");
     tape.innerHTML = microsoft.river.hall.rose;
+    tape.addEventListener('click',()=>{
+      window.open('https://customers.microsoft.com/en-us/story/1770317375595733395-hp-github-professional-services-en-united-states')
+    })
 
     const male = document.getElementById("men");
     microsoft.river.test.forEach((item) => {
@@ -869,12 +893,46 @@ ${item.aloo}`;
     rr.innerHTML = microsoft.mullet.dog;
 
     const houl = document.getElementById("loofi");
-    microsoft.mullet.hauled.forEach((item) => {
+    microsoft.mullet.hauled.forEach((item,idx) => {
       const bola = document.createElement("div");
       bola.classList.add("nara");
-      bola.innerHTML = `<div class="naras"><img src="${item.img}" alt="" class = roof></div>`;
+      bola.innerHTML = `<div class=""><img src="${item.img}" alt="" class = roof></div>`;
       houl.appendChild(bola);
+      if(idx === 0){
+        bola.className = 'naras'
+      }if(idx ===1){
+                bola.className = 'noop'
+
+      }
+        if(idx === 2){
+        bola.className = 'tool'
+      }if(idx ===3){
+                bola.className = 'fool'
+
+      }
     });
+
+    const naras = document.querySelector('.naras')
+    naras.addEventListener('click',()=>{
+      window.open('https://x.com/azure')
+    })
+    const insta = document.querySelector('.noop')
+    insta.addEventListener('click',()=>{
+      window.open('https://www.instagram.com/microsoftdeveloper/')
+    })
+    const twitter = document.querySelector('.tool')
+    twitter.addEventListener('click',()=>{
+      window.open('https://www.linkedin.com/showcase/microsoft-azure/')
+    })
+    const  you= document.querySelector('.fool')
+  you.addEventListener('click',()=>{
+      window.open('https://www.youtube.com/channel/UC0m-80FnNY2Qb7obvTL_2fA')
+    })
+
+    const haul = document.getElementById('haul')
+    haul.addEventListener('click',()=>{
+      window.open('https://azure.microsoft.com/en-us/get-started/azure-portal/mobile-app')
+    })
     const footerTop = document.getElementById("footer-top");
     microsoft.footer.footerTop.forEach((item) => {
       const footerDiv = document.createElement("div");
@@ -932,6 +990,36 @@ ${item.aloo}`;
   dope.classList.add("air")
   dope.innerHTML = microsoft.Ai
   AI.appendChild(dope)
+
+  const dropdownIn = document.createElement('ul')
+  dropdownIn.classList.add('dropdownIn')
+  dope.appendChild(dropdownIn)
+
+  dope.addEventListener('click',()=>{
+    dropdownIn.innerHTML = ''
+    const data = [...microsoft.header.features,...microsoft.header.support]
+    data.forEach(item=>{
+      dropdownIn.innerHTML += `<div>${item.title}</div>`
+    })
+    dropdownIn.innerHTML += `<div>${microsoft.header.getStartButton.text}</div>`
+        dropdownIn.innerHTML += `<div>${microsoft.header.startGetBUtton.text}</div>`
+
+        //  dropdownIn.style.display = 'none';
+         if(dropdownIn.style.display === 'none' || dropdownIn.style.display ===''){
+          dropdownIn.style.display = 'block'
+         }else{
+          dropdownIn.style.display = 'none'
+         }
+  
+  })
+// document.addEventListener('click', (event) => {
+//   if (!dope.contains(event.target) && !dropdownIn.contains(event.target)) {
+//     dropdownIn.style.display = 'none';
+//   }
+// }); 
+
+
+
 
 
   buildTeamsPage();
