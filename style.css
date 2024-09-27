@@ -1953,7 +1953,7 @@ display: none;
         overflow: auto;
         box-sizing: border-box;
         flex-direction: row;
-         padding-left: 40px;
+         /* padding-left: 40px; */
         /* margin: 0; */
     }
  
@@ -2005,6 +2005,8 @@ max-width: 100%;
     .scroll{
         left: 0;
     }
+    .full-box{
+    }
 }
 @media (max-width:1083px){
   .peda{
@@ -2037,8 +2039,9 @@ max-width: 100%;
         flex-wrap: nowrap;
     }
     .full-box{
-        padding: 10px;
+        /* padding: 10px; */
         width: 90%;
+        padding: 0;
     }
     .footer-bottom div{
         display: block;
@@ -2359,7 +2362,7 @@ padding: 0;
 }
 .boxer{
     padding: 10px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .resources{
     padding: 60px;
