@@ -1014,7 +1014,6 @@ ${item.aloo}`;
     dropdownIn.innerHTML += `<div>${microsoft.header.getStartButton.text}</div>`
         dropdownIn.innerHTML += `<div>${microsoft.header.startGetBUtton.text}</div>`
 
-        //  dropdownIn.style.display = 'none';
          if(dropdownIn.style.display === 'none' || dropdownIn.style.display ===''){
           dropdownIn.style.display = 'block'
          }else{

@@ -112,7 +112,7 @@ body{
 }
 
 #menu-list li{
-    padding: 5px 10px;
+    padding: 1px 10px;
     display: flex;
     flex-flow: row;
     font-family: "4th-font";
@@ -544,7 +544,7 @@ padding-left: 7px;
 .section1-padding{
     display: flex;
     flex-direction: row;
-    max-width: 1297px;
+    /* max-width: 1297px; */
     padding: 17px 85px;
     column-gap: 10px;
     height: 437px;
@@ -716,7 +716,7 @@ letter-spacing: normal;
     left: 6%;
     right: 0;
     box-sizing: border-box;
-    max-width: 1261.5px;
+    max-width: 1400.5px;
       margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -1291,12 +1291,12 @@ height: 100vh;
 .nailed-again{
     position: absolute;
     top: 0;
-    left: 6%;
+    left: 18%;
 }
 .naileIn{
 max-width: 100%;
 object-fit: cover;
-height: 472.8px;
+max-height: 472.8px;
 border-radius: 8px;
 }
 .lise{
@@ -1397,12 +1397,12 @@ line-height: 16px
 }
 .rdx button{
     padding: 12px 15px;
-    background-color: #0078D4;
+    background-color: #0078D4;;
     border: none;
     border-radius: 8px;
     position: absolute;
-    right: 20%;
-    top: 34%;
+    right: 15%;
+    top: 44%;
 }
 #right-flex{
     position: relative;
@@ -1597,7 +1597,7 @@ flex-direction: column;
 margin: auto;
 position: absolute;
 top: 20%;
-left: 5%;
+left: 9%;
     
      }
 .peda{
@@ -1918,11 +1918,9 @@ display: none;
 
 @media(max-width:1399px) {
     #sarchSpan{
-display: none;
+font-size: 0;
     }
-    #sarchSpan::after{
-        display: flex;
-    }
+ 
 }
 
 @media(max-width:1440px){
@@ -2009,8 +2007,11 @@ max-width: 100%;
     }
 }
 @media (max-width:1083px){
-    .rightSide{
-        display: none;
+  .peda{
+    row-gap: 0;
+  }
+    .right-search:first-child{
+        display: flex;
     }
     .azim{
         left: 17%;
@@ -2144,6 +2145,9 @@ max-width: 100%;
 .section1{
     height: 1400px;
 }
+.rightSide{
+    display: none;
+}
 .blue{
     padding-top: 80%;
 }
@@ -2244,15 +2248,20 @@ background-color: transparent;
   border-bottom: 1px solid #e6e6e6 ;
   font-size: 15px;
   font-family: "normal-font";
+  cursor: pointer;
 
     }
     .droper li:hover{
-        color: #bdc5d2;
+        background-color: #bdc5d2;
         cursor: pointer;
     }
   
     #header{
+        position: relative;
         padding: 0;
+    }
+    .header-left{
+        flex-direction: row-reverse;
     }
     #mobile-hide:nth-child(1){
 display: flex;
@@ -2268,7 +2277,20 @@ display: flex;
     #mobile-hide li:nth-child(5){
         display: none;
     }
+    .team-text.team-text::before {
+        display: none;
+    }
     #menu-list{
+    display: none;
+}
+.header-logo{
+    display: flex;
+position: absolute;
+left: 39%;
+/* transform: translate(-50%, -50%); */
+
+}
+#teams{
     display: none;
 }
 .menu-btn{
@@ -2450,8 +2472,8 @@ height: 100%;
     position: relative;
 }
 .rdx button {
-   transform: translateY(-100px);
-right: 53%;
+   top: 20%;
+right: 56%;
 }
 }
 @media(max-width:539px){
@@ -2500,6 +2522,9 @@ right: 53%;
     .banner-padding{
         padding-right: 0;
     }
+    .villain{
+        display: none;
+    }
 
 }
 @media(max-width:407px){
@@ -2525,9 +2550,16 @@ right: 53%;
     max-width: 400px;
    }
    .rdx button{
-transform: translateY(-150px); 
-right: 40%; 
+/* transform: translateY(-150px);  */
+/* right: 40%;  */
+transform: translate(-50%,-50%);
 }
+}
+
+@media(min-width:1400px){
+    .nailed-again{
+        left: 20%;
+    }
 }
 
 
