@@ -497,6 +497,16 @@ const microsoft = {
   },
   Ai:"Azure",
     last: "Chat with sales",
+
+menuDrop : [
+"Microsoft 365","Teams","Copilot","Wisndow","Suface","Xbox","Deals","Small Business","Support","software","PCs & Devicess","Entertainment","BUsiness","Developer & IT","Other","Vies Sitemap"
+]
+
+
+
+
+
+
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1012,13 +1022,29 @@ ${item.aloo}`;
          }
   
   })
-// document.addEventListener('click', (event) => {
-//   if (!dope.contains(event.target) && !dropdownIn.contains(event.target)) {
-//     dropdownIn.style.display = 'none';
-//   }
-// }); 
+const header = document.querySelector('#header')
+const Droper= document.createElement('ul')
+Droper.className = 'droper'
+
+header.appendChild(Droper)
+
+microsoft.menuDrop.forEach(item=>{
+  const InDrop = document.createElement('li')
+  InDrop.innerHTML = `${item}`
+  Droper.appendChild(InDrop)
+  Droper.style.display =  'none'
+})
 
 
+const menuBtn = document.querySelector('.menu-btn')
+menuBtn.appendChild(Droper)
+menuBtn.addEventListener('click',()=>{
+  if(Droper.style.display ==='none'){
+    Droper.style.display = 'block'
+  }else{
+    Droper.style.display = 'none'
+  }
+})
 
 
 
