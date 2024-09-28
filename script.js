@@ -517,9 +517,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.title = microsoft.pageTitle;
     const headerleft = document.getElementById("header-left");
 
-    const menuImg = document.getElementById("menu-img");
-        menuImg.src = microsoft.header.menu;
-      
+  
     const imgElement = document.getElementById("logo-img");
     imgElement.src = microsoft.header.logo;
     const teams = document.getElementById("teams");
@@ -808,7 +806,6 @@ microsoft.stickyNav.stickynavul.forEach(item=> {
   const dropli = document.createElement('li')
   dropli.innerText = `${item.txt}`
   dropNav.appendChild(dropli)
-  // dropNav.style.display = 'none'
 })
 
 stickyNav.addEventListener('click',()=>{
@@ -819,7 +816,6 @@ stickyNav.addEventListener('click',()=>{
   }
 })
 
-// microsoft.header.getStartButton.forEach(item=>{
   const buttonNav = document.createElement('button')
   buttonNav.className = 'buttonNav'
   buttonNav.innerHTML += `Get started with azure`
@@ -1086,7 +1082,9 @@ microsoft.menuDrop.forEach(item=>{
   Droper.style.display =  'none'
 })
 
-
+  const menuImg = document.getElementById("menu-img");
+        menuImg.src = microsoft.header.menu;
+      
 const menuBtn = document.querySelector('.menu-btn')
 const cross = microsoft.header.cross
    const buttonafter = document.createElement('div')
@@ -1103,10 +1101,15 @@ menuBtn.addEventListener('click',()=>{
     Droper.style.display = 'none'
   }
   
-
-  if(buttonafter.style.display === 'none'){
-    buttonafter.style.display = 'block'
-  }else(buttonafter.style.display = 'none')
+  
+  if (menuImg.style.display !== 'none') {
+    menuImg.style.display = 'none';  
+    buttonafter.style.display = 'block'; 
+  } else {
+    menuImg.style.display = 'block';  
+    buttonafter.style.display = 'none';
+  }
+  
 })
 
 

@@ -624,6 +624,7 @@ ul#mobile-hide li:first-child {
   margin-top: 30px;
   box-sizing: border-box;
   overflow-x: auto;
+  scrollbar-width: none;
 }
 .migration li {
   display: flex;
@@ -744,8 +745,8 @@ ul#mobile-hide li:first-child {
   width: 100%;
   display: flex;
   box-sizing: border-box;
-  max-width: 100%;
-  height: 100vh;
+  max-height: 100vh;
+  height: 100%;
 }
 .aiDiv {
   box-sizing: border-box;
@@ -763,9 +764,14 @@ ul#mobile-hide li:first-child {
   position: absolute;
   top: 0;
 }
-.blue {
+.blueWale {
   background-color: #f4fafd;
   padding-bottom: 3%;
+  /* max-width: 1100px; */
+  padding: 60px 70px;
+  left: 20px;
+  /* position: relative; */
+  margin: auto;
 }
 #view {
   width: 14.7px;
@@ -865,6 +871,7 @@ ul#mobile-hide li:first-child {
   align-items: center;
   flex-direction: row;
   overflow-x: auto;
+  scrollbar-width: none;
   width: 90%;
 }
 
@@ -990,6 +997,7 @@ li.roller {
 .product {
   position: relative;
   background-color: #f4fafd;
+  
 }
 .nailed {
   position: absolute;
@@ -1248,7 +1256,9 @@ li.roller {
 .nailed-again {
   position: absolute;
   top: 0;
-  left: 18%;
+  margin: auto;
+  
+  left: 14%;
 }
 .naileIn {
   max-width: 100%;
@@ -1356,6 +1366,7 @@ li.roller {
   position: absolute;
   right: 15%;
   top: 44%;
+  transform: translate(-50%,-50%);
 }
 #right-flex {
   position: relative;
@@ -1894,6 +1905,7 @@ li.roller {
     overflow: auto;
     box-sizing: border-box;
     flex-direction: row;
+    scrollbar-width: none;
     
   }
 
@@ -1919,9 +1931,7 @@ li.roller {
     padding-top: 30px;
     justify-content: center;
   }
-  .blue {
-    padding: 0 80px;
-  }
+
   .rdx img {
     width: 80%;
     height: 83%;
@@ -1940,7 +1950,11 @@ li.roller {
   }
   .scroll {
     left: 0;
+  .blueWale{
+    max-width: 1200px;
+    width: 90%;
   }
+}
  }
 @media (max-width: 1083px) {
   .peda {
@@ -2026,7 +2040,7 @@ li.roller {
     left: -20px;
   }
   .navmobile-hide {
-    max-width: 617px;
+    max-width: 367px;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -2035,7 +2049,7 @@ li.roller {
     max-width: 100%;
     right: 0;
     left: 0;
-    padding: 0 30px;
+    /* padding: 0 30px; */
   }
   .nav-content1 {
     width: 100%;
@@ -2067,6 +2081,7 @@ li.roller {
     display: flex;
     flex-direction: column;
     padding: 0 70px;
+    
   }
   .blueright {
     display: none;
@@ -2077,7 +2092,7 @@ li.roller {
   .rightSide {
     display: none;
   }
-  .blue {
+  .blueWale{
     padding-top: 80%;
   }
   .card-content {
@@ -2515,6 +2530,9 @@ display: none;
   .rdx button {
     transform: translate(-50%, -50%);
   }
+  .section1-item{
+    padding-top: 15px;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -2529,16 +2547,13 @@ display: none;
    .section1-bg{
     padding-left: 4%;
    }
-   .blue{
+   .blueWale{
     padding-left: 3%;
    }
    .loffi{
     padding-left: 5%;
    }
-   .grand{
-   max-width: 1510px;
-   padding: 0 100px;
-   }
+  
    #modem{
     height: 72vh;
    }
