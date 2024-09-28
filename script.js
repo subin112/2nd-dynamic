@@ -1,6 +1,7 @@
 const microsoft = {
   pageTitle: "Azure Dynamic",
   header: {
+    cross:"icon2/cross.png",
     menu: "icon2/icon/menu-horizontal.svg",
     logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31",
 
@@ -8,44 +9,46 @@ const microsoft = {
     icon: "icon2/icon/down-arrow.png",
     features: [
       {
+      
         title: "Explore",
-        icon: "icon2/icon/arrow-down.svg",
         subItems:[
 "Get to know Azure","Global infrastructure","FinOps on Azure","Azure Essential","Customer stories","Azure innovation insight"
         ]
       },
       {
+          array1:["AI + machine learning","Azure AI Services","MIcrosoft Copilot in Azure PREVIEW","Azure OpenAI Services","Azure AI  vision","Azure AI Search","Azure AI BOt Service","Azure Darabricks","Azure AI Language"] ,
+         array2:["Compute","Azure kumbernets Services","Linux virtual machines in Azures","SQL Server on Azure Virtual Machine","Window Virtual Machines","Azure Function","Azure virtual Machine Scale Sets","Azure Spots virtulal machines","Azure Container Apps","Azure Computer Fleet"] ,
+       
         title: "Products",
-        icon: "icon2/icon/arrow-down.svg",
         subItems:[
  "Popular","Axzue Virtual Machines","Azure Virtual Desktop","Azure SQL","Microsoft in Azure Preview","Azure AI Services","Azure AI Studio","Azure Cosmos DB","Azure Kumbernets Services","Azure Arc","Azure Migrate",
         ]
       },
       {
+         Its:["AI + machine learning","Azure Machine Learning","",""],
         title: "Solutions",
-        icon: "icon2/icon/arrow-down.svg",
         subItems:[
           "Azure AI","Migrate to innovate in ther era of AI","Build and modernize intelligent apps","AI for data analytics","Azure AI infrastructure", "Adaptve cloud","Azure network security",
         ]
       },
       {
+         Its:["AI + machine learning","Azure Machine Learning","",""],
         title: "Pricing",
-        icon: "icon2/icon/arrow-down.svg",
         subItems:[
           "How to buy Azure services","Azure Account","Flexibility purchace options","Azure benefits and incentives",,
          
         ]
       },
       {
+         Its:["AI + machine learning","Azure Machine Learning","",""],
         title: "Partners",
-        icon: "icon2/icon/arrow-down.svg",
         subItems:[
           "Become a partner","Azure for Partners","Azure for ISVs","JOin ISV Success",
         ]
       },
       {
+         Its:["AI + machine learning","Azure Machine Learning","",""],
         title: "More",
-        icon: "icon2/icon/arrow-down.svg",
         subItems:[
           "Learning","Get stated with Azure","Training and certification","Customer stories","Anylyst repots ,white papers,and e-bookd","videos","Learn more about cloud computing",
         ]
@@ -515,8 +518,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerleft = document.getElementById("header-left");
 
     const menuImg = document.getElementById("menu-img");
-    menuImg.src = microsoft.header.menu;
-
+        menuImg.src = microsoft.header.menu;
+      
     const imgElement = document.getElementById("logo-img");
     imgElement.src = microsoft.header.logo;
     const teams = document.getElementById("teams");
@@ -533,6 +536,7 @@ microsoft.header.features.forEach((item) => {
 
   const sublist = document.createElement('ul');
   sublist.style.display = 'none'; 
+  
 
   item.subItems.forEach((subItem) => {
     const subListItem = document.createElement('li');
@@ -540,6 +544,21 @@ microsoft.header.features.forEach((item) => {
     subListItem.innerHTML = `${subItem}`;
     sublist.appendChild(subListItem);
   });
+
+  microsoft.header.features.forEach((item) =>{
+    const addUl = document.createElement('ul')
+    addUl.className = 'Ul2'
+    
+const newListItem = document.createElement('li')
+newListItem.className = 'additional-li'
+newListItem.innerHTML = `${item.array1array1}`
+addUl.appendChild(newListItem)
+sublist.appendChild(addUl)
+
+  })
+
+
+
 
   menuItem.appendChild(sublist);
 
@@ -551,8 +570,6 @@ microsoft.header.features.forEach((item) => {
     }
     
   });
-
- 
 
   menuList.appendChild(menuItem);
   menuList.classList.add('menuList');
@@ -791,12 +808,12 @@ microsoft.stickyNav.stickynavul.forEach(item=> {
   const dropli = document.createElement('li')
   dropli.innerText = `${item.txt}`
   dropNav.appendChild(dropli)
-  dropNav.style.display = 'none'
+  // dropNav.style.display = 'none'
 })
 
 stickyNav.addEventListener('click',()=>{
   if(dropNav.style.display === 'none'){
-    dropNav.style.display = 'block'
+    dropNav.style.display = 'block' 
   }else{
     dropNav.style.display = 'none'
   }
@@ -1048,9 +1065,12 @@ ${item.aloo}`;
 
          if(dropdownIn.style.display === 'none' || dropdownIn.style.display ===''){
           dropdownIn.style.display = 'block'
+          
          }else{
           dropdownIn.style.display = 'none'
          }
+
+         
   
   })
 const header = document.querySelector('#header')
@@ -1068,6 +1088,13 @@ microsoft.menuDrop.forEach(item=>{
 
 
 const menuBtn = document.querySelector('.menu-btn')
+const cross = microsoft.header.cross
+   const buttonafter = document.createElement('div')
+   buttonafter.className = 'crossx'
+   buttonafter.innerHTML = `<img src="${cross}" alt="" id="click" class="clickoff">`
+   menuBtn.appendChild(buttonafter)
+   buttonafter.style.display = 'none'
+
 menuBtn.appendChild(Droper)
 menuBtn.addEventListener('click',()=>{
   if(Droper.style.display ==='none'){
@@ -1075,9 +1102,64 @@ menuBtn.addEventListener('click',()=>{
   }else{
     Droper.style.display = 'none'
   }
+  
+
+  if(buttonafter.style.display === 'none'){
+    buttonafter.style.display = 'block'
+  }else(buttonafter.style.display = 'none')
 })
 
 
 
   buildTeamsPage();
 });
+
+
+
+// const menuList = document.getElementById("menu-list");
+
+// microsoft.header.features.forEach((item) => {
+//   const menuItem = document.createElement("li");
+//   menuItem.innerHTML = `${item.title}`;
+
+//   const sublist = document.createElement('ul');
+//   sublist.style.display = 'none'; 
+
+//   // Add the initial subItems as li
+//   item.subItems.forEach((subItem) => {
+//     const subListItem = document.createElement('li');
+//     subListItem.className = 'liMain';
+//     subListItem.innerHTML = `${subItem}`;
+//     sublist.appendChild(subListItem);
+//   });
+
+//   // Add array1 items as li
+//   item.array1.forEach((arrayItem) => {
+//     const newListItem = document.createElement('li');
+//     newListItem.className = 'additional-li';
+//     newListItem.innerHTML = `${arrayItem}`;
+//     sublist.appendChild(newListItem);
+//   });
+
+//   // Add array2 items as li
+//   item.array2.forEach((arrayItem) => {
+//     const newListItem = document.createElement('li');
+//     newListItem.className = 'additional-li';
+//     newListItem.innerHTML = `${arrayItem}`;
+//     sublist.appendChild(newListItem);
+//   });
+
+//   menuItem.appendChild(sublist);
+
+//   // Toggle display on click
+//   menuItem.addEventListener('click', () => {
+//     if (sublist.style.display === 'none') {
+//       sublist.style.display = 'block'; 
+//     } else {
+//       sublist.style.display = 'none'; 
+//     }
+//   });
+
+//   menuList.appendChild(menuItem);
+//   menuList.classList.add('menuList');
+// });
