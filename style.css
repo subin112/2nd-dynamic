@@ -381,6 +381,8 @@ button#head-btn{
     height: 52px;
     align-items: center;
     margin-top: 20px;
+    z-index: 99999;
+    opacity: 1;
 }
 #head-btn{
     color: #fff;
@@ -435,6 +437,7 @@ align-items: center;
       padding-left: 2.9%;
 position: relative; 
     z-index: 1;
+    cursor: pointer;
 }
 .fixedtop{
     position: fixed;
@@ -1913,6 +1916,9 @@ display: none;
 .header-padding{
     position: relative;
 }
+.dropNav{
+    display: none;
+}
 
 /*                    responsive                    */
 
@@ -2457,18 +2463,64 @@ height: 100%;
    z-index: 9999;
    cursor: pointer;
    }
+
+   .dropNav{
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    top: 40px;
+    padding: 0;
+    justify-content: left;
+
+   }
+   .dropNav li{
+text-align: left;
+padding: 12px;
+
+}
+.dropNav li:nth-child(5)
+{
+    border-bottom: 2px solid #ccc;
+    width: 97%;
+    margin: auto;
+}
+.buttonNav{
+    display: flex;
+    width: 98%;
+    padding:  0 5px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "4th-font";
+    margin: auto;
+    background-color: rgb(0, 120, 212);
+margin-top: 10px;
+
+}
 .section-nav{
     position: relative;
     border-bottom: 4px solid #0078d4;
     border-radius: 3px;
-    width: 99%;
-    z-index: -30;
-}
+    /* z-index: -1; */
+   }
+ 
 .sticky-padding ul li:first-child {
    border-bottom: none;
 }
 .section1-item img{
     width: 98%;
+}
+.navmobile-hide{
+    padding: 0;
 }
 
 .right-flex{

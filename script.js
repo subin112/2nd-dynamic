@@ -782,6 +782,36 @@ elFine.addEventListener('click',()=>{
 const stickyNav = document.querySelector('.section-nav');
 const sticky = stickyNav.offsetTop; 
 
+const dropNav = document.createElement('ul')
+dropNav.className = 'dropNav'
+stickyNav.appendChild(dropNav)
+
+microsoft.stickyNav.stickynavul.forEach(item=> {
+
+  const dropli = document.createElement('li')
+  dropli.innerText = `${item.txt}`
+  dropNav.appendChild(dropli)
+  dropNav.style.display = 'none'
+})
+
+stickyNav.addEventListener('click',()=>{
+  if(dropNav.style.display === 'none'){
+    dropNav.style.display = 'block'
+  }else{
+    dropNav.style.display = 'none'
+  }
+})
+
+// microsoft.header.getStartButton.forEach(item=>{
+  const buttonNav = document.createElement('button')
+  buttonNav.className = 'buttonNav'
+  buttonNav.innerHTML += `Get started with azure`
+  dropNav.appendChild(buttonNav)
+
+// })
+
+
+
 window.addEventListener('scroll', () => {
     if (window.pageYOffset >= sticky) {
         stickyNav.classList.add('fixedtop');
@@ -789,6 +819,8 @@ window.addEventListener('scroll', () => {
         stickyNav.classList.remove('fixedtop');
     }
 });
+
+
 
 
     const mall = document.getElementById("mall");
