@@ -421,6 +421,7 @@ button#head-btn {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  z-index: 5;
 }
 .fixedtop {
   position: fixed;
@@ -473,6 +474,9 @@ button#head-btn {
 .nav-content1 {
   display: flex;
   flex-direction: row;
+}
+.section{
+  z-index: 5;
 }
 .section1-item img {
   width: 96.5%;
@@ -766,6 +770,7 @@ display: none;
 .section1-bg {
   position: absolute;
   top: 60px;
+  z-index: 5;
 }
 .blueWale {
   background-color: #f4fafd;
@@ -1000,6 +1005,7 @@ li.roller {
 .product {
   position: relative;
   background-color: #f4fafd;
+  /* padding: 14px; */
   
 }
 .nailed {
@@ -1007,7 +1013,7 @@ li.roller {
   top: 0;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 97%;
   object-fit: cover;
   position: absolute;
   height: 100%;
@@ -1784,6 +1790,7 @@ li.roller {
 }
 .droper {
   display: none;
+
 }
 .menu-btn {
   display: none;
@@ -1894,6 +1901,7 @@ li.roller {
     display: flex;
     width: 100%;
     max-height: 1856px;
+    height: 100%;
   }
   #gradient {
     width: 100%;
@@ -2087,6 +2095,7 @@ li.roller {
     display: flex;
     flex-direction: column;
     padding: 0 70px;
+    row-gap: 20px;
     
   }
   #mall2{
@@ -2105,10 +2114,10 @@ li.roller {
   content: url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mobile-feature-BG-2x-1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=720&hei=2738&qlt=100&fmt=png-alpha&fit=constrain');
   width: 100%;
   z-index: 20;
-  height: 150vh;
+  max-height: 170vh;
 }
 .section1-bg{
-  z-index: 999;
+  z-index: 99;
 }
   #sectiontoper{
     display: block;
@@ -2120,9 +2129,7 @@ li.roller {
   .blueright {
     display: none;
   }
-  .section1 {
-    height: 1400px;
-  }
+ 
   .rightSide {
     display: none;
   }
@@ -2208,6 +2215,7 @@ li.roller {
     border-bottom: 1px solid;
     justify-content: center;
     text-align: center;
+    z-index: 999;
   }
 
   .droper li {
@@ -2316,9 +2324,7 @@ li.roller {
   .furry {
     margin-top: 20px;
   }
-  .loffi {
-    padding: 20px;
-  }
+ 
   .footer-bottom {
     padding: 0;
   }
@@ -2431,6 +2437,7 @@ li.roller {
     top: 40px;
     padding: 0;
     justify-content: left;
+    z-index: 999;
   }
   .dropNav li {
     text-align: left;
@@ -2470,6 +2477,7 @@ li.roller {
   }
   .section1-item img {
     width: 98%;
+    margin-bottom: 20px;
   }
   .navmobile-hide {
     padding: 0;
@@ -2560,9 +2568,7 @@ display: none;
   .rdx button {
     transform: translate(-50%, -50%);
   }
-  .section1-item{
-    padding-top: 15px;
-  }
+  
 }
 
 @media (min-width: 1400px) {

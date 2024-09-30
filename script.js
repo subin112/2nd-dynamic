@@ -816,13 +816,13 @@ microsoft.stickyNav.stickynavul.forEach(item=> {
 })
 
 stickyNav.addEventListener('click',()=>{
-  // if (window.innerWidth < 860){
-    if(dropNav.style.display === 'none' || dropNav.style.display === ''){
+  if (window.innerWidth < 860){
+    if(dropNav.style.display === 'none'){
       dropNav.style.display = 'block' 
     }else{
       dropNav.style.display = 'none'
     }
-  // }
+  }
     
 })
 
