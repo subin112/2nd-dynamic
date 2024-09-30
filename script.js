@@ -200,6 +200,7 @@ const microsoft = {
 
     roughsec: {
       icon: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-CustomerStories-BG@4x-1?resMode=sharp2&op_usm=1.5,0.65,15,0&qlt=85",
+      icon2:"https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mobile-feature-BG-2x-1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=720&hei=2738&qlt=100&fmt=png-alpha&fit=constrain"
     },
 
     loader: {
@@ -747,9 +748,13 @@ const  villain = document.querySelector('.rdx')
     movie.innerHTML = ''
     villain.appendChild(movie)
     
-
+const mainSection = document.querySelector('.main-section')
     const sectionoff = document.getElementById("sectionoff");
     sectionoff.src = microsoft.main.roughsec.icon;
+    const sectionoffer = document.createElement("div")
+    sectionoffer.className = 'sectionoffer'
+    sectionoffer.innerHTML = ` <img src="${microsoft.main.roughsec.icon2}" alt="" class="sectiontoper" />`
+mainSection.appendChild(sectionoffer)
 
     const care = document.getElementById("viewon");
     care.innerHTML = microsoft.main.section3.null.diven.lola;
@@ -801,19 +806,24 @@ const dropNav = document.createElement('ul')
 dropNav.className = 'dropNav'
 stickyNav.appendChild(dropNav)
 
+
 microsoft.stickyNav.stickynavul.forEach(item=> {
 
   const dropli = document.createElement('li')
   dropli.innerText = `${item.txt}`
   dropNav.appendChild(dropli)
+
 })
 
 stickyNav.addEventListener('click',()=>{
-  if(dropNav.style.display === 'none'){
-    dropNav.style.display = 'block' 
-  }else{
-    dropNav.style.display = 'none'
-  }
+  // if (window.innerWidth < 860){
+    if(dropNav.style.display === 'none' || dropNav.style.display === ''){
+      dropNav.style.display = 'block' 
+    }else{
+      dropNav.style.display = 'none'
+    }
+  // }
+    
 })
 
   const buttonNav = document.createElement('button')

@@ -666,6 +666,9 @@ ul#mobile-hide li:first-child {
   scrollbar-width: 10px;
   overflow-y: auto;
 }
+#sectiontoper{
+display: none;
+}
 .scroll {
   position: relative;
   left: 6%;
@@ -762,7 +765,7 @@ ul#mobile-hide li:first-child {
 }
 .section1-bg {
   position: absolute;
-  top: 0;
+  top: 60px;
 }
 .blueWale {
   background-color: #f4fafd;
@@ -991,7 +994,7 @@ li.roller {
 #mall {
   width: 100%;
   height: 100%;
-  height: 115vh;
+  max-height: 115vh;
   /* position: relative; */
 }
 .product {
@@ -1868,7 +1871,9 @@ li.roller {
 .dropNav {
   display: none;
 }
-
+.sectionoffer{
+  display: none;
+}
 /*                    responsive                    */
 
 @media (max-width: 1399px) {
@@ -1911,6 +1916,8 @@ li.roller {
 
   .nailed-again {
     max-width: 100%;
+    left: 10%;
+    
   }
   .nailed {
     padding-top: 7%;
@@ -1950,11 +1957,10 @@ li.roller {
   }
   .scroll {
     left: 0;
-  .blueWale{
-    max-width: 1200px;
-    width: 90%;
   }
-}
+ .blueWale{
+  margin-top: 0;
+ }
  }
 @media (max-width: 1083px) {
   .peda {
@@ -2083,6 +2089,34 @@ li.roller {
     padding: 0 70px;
     
   }
+  #mall2{
+    max-height: 2200px;
+  }
+  .blueWale{
+    padding: 60px 30px;
+  }
+  #sectionoff{
+    display: none;
+  }
+.sectionoffer{
+  display: flex;
+  position: relative;
+  top: 0;
+  content: url('https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mobile-feature-BG-2x-1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=720&hei=2738&qlt=100&fmt=png-alpha&fit=constrain');
+  width: 100%;
+  z-index: 20;
+  height: 150vh;
+}
+.section1-bg{
+  z-index: 999;
+}
+  #sectiontoper{
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
   .blueright {
     display: none;
   }
@@ -2092,9 +2126,7 @@ li.roller {
   .rightSide {
     display: none;
   }
-  .blueWale{
-    padding-top: 80%;
-  }
+ 
   .card-content {
     padding: 10px 13px;
   }
@@ -2104,9 +2136,7 @@ li.roller {
   .card-footer {
     position: inherit;
   }
-  .section2 {
-    margin-top: 30%;
-  }
+ 
   .small-txt {
     display: block;
     height: 34px;
@@ -2548,7 +2578,7 @@ display: none;
     padding-left: 4%;
    }
    .blueWale{
-    padding-left: 3%;
+    /* padding-left: 3%; */
    }
    .loffi{
     padding-left: 5%;
